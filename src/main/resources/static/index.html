@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>ClearSpend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>ClearSpend - Expense Tracker</h1>
+
+    <!-- Add Expense Section -->
+    <h2>Add Transaction</h2>
+	
+	
+    <input type="number" id="amount" placeholder="Amount">
+    <input type="date" id="date">
+    
+    <select id="type">
+        <option value="INCOME">Income</option>
+        <option value="EXPENSE">Expense</option>
+    </select>
+
+    <input type="text" id="description" placeholder="Description">
+
+    <button onclick="addExpense()">Add</button>
+
+    <hr>
+
+    <!-- Monthly Summary Section -->
+    <h2>Monthly Summary</h2>
+
+    <input type="number" id="year" placeholder="Year (e.g. 2026)">
+    <input type="number" id="month" placeholder="Month (1-12)">
+    
+
+    <button onclick="getSummary()">Get Summary</button>
+    <button onclick="clearAll()">Clear All Data</button>
+    
+	<h2>Transactions</h2>
+	<p id="transactionCount"></p>
+	<ul id="transactionList"></ul>
+	
+	
+    <h3 id="result"></h3>
+
+    <script src="script.js"></script>
+</body>
+</html>
