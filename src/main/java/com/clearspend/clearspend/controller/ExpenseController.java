@@ -19,13 +19,12 @@ public class ExpenseController {
         this.expenseService = expenseService;
     }
 
-    // Add Expense
     @PostMapping
     public Expense addExpense(@RequestBody Expense expense) {
         return expenseService.addExpense(expense);
     }
 
-    // Get Monthly Summary
+    
     @GetMapping("/summary")
     public MonthlySummaryDto getMonthlySummary(
             @RequestParam int year,
@@ -34,7 +33,6 @@ public class ExpenseController {
         return expenseService.getMonthlySummary(year, month);
     }
     
-    // Get Monthly Transactions
     @GetMapping("/list")
     public List<Expense> getMonthlyExpenses(
             @RequestParam int year,
@@ -42,8 +40,7 @@ public class ExpenseController {
 
         return expenseService.getMonthlyExpenses(year, month);
     }
-
-    // Clear All Data
+    
     @DeleteMapping("/clear")
     public String clearAllExpenses() {
         expenseService.deleteAllExpenses();
