@@ -20,12 +20,9 @@ public class Expense {
     @Enumerated(EnumType.STRING)
     private ExpenseType type;
 
-    // Constructor
     public Expense() {
     }
-
-    // Getters
-
+ 
     public Long getId() {
         return id;
     }
@@ -45,8 +42,6 @@ public class Expense {
     public ExpenseType getType() {
         return type;
     }
-
-    // Setters
 
     public void setId(Long id) {
         this.id = id;
