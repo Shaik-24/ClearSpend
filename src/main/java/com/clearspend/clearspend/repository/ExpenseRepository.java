@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface ExpenseRepository extends JpaRepository<Expense, Long> {
 
-    // Get expenses between dates (chronological order)
     List<Expense> findByDateBetweenOrderByDateAsc(
             LocalDate startDate,
             LocalDate endDate
