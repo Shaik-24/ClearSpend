@@ -1,6 +1,6 @@
 const BASE_URL = "http://localhost:8080/api/expenses";
 
-// Add Expense
+
 function addExpense() {
 
     const amount = document.getElementById("amount").value;
@@ -31,7 +31,7 @@ function addExpense() {
 }
 
 
-// Get Monthly Summary
+
 function getSummary() {
 
     const year = document.getElementById("year").value;
@@ -68,7 +68,7 @@ function getSummary() {
     const year = document.getElementById("year").value;
     const month = document.getElementById("month").value;
 
-    // Get Summary
+  
     fetch(`${BASE_URL}/summary?year=${year}&month=${month}`)
         .then(response => response.json())
         .then(data => {
@@ -78,7 +78,7 @@ function getSummary() {
                 "<br>Net Balance: ₹" + data.netBalance;
         });
 
-    // Get Transaction List
+ 
 	fetch(`${BASE_URL}/list?year=${year}&month=${month}`)
 	    .then(response => response.json())
 	    .then(data => {
